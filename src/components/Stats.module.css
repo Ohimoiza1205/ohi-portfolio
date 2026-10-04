@@ -1,0 +1,18 @@
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.stat {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line));
+  background: color-mix(in srgb, var(--accent) 6%, var(--paper));
+  border-radius: 3px;
+  padding: 0.22rem 0.55rem;
+}

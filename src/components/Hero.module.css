@@ -1,0 +1,60 @@
+.hero {
+  padding: clamp(3rem, 9vw, 5.5rem) 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.mark {
+  width: clamp(96px, 26vw, 128px);
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.name {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: clamp(2.3rem, 7vw, 3.6rem);
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 1.4rem 0 0.5rem;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0;
+}
+
+.sep {
+  color: var(--accent);
+  padding: 0 0.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+.social a:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+  background: var(--paper-2);
+}

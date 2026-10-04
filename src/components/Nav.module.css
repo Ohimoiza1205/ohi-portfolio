@@ -1,0 +1,77 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 clamp(1.1rem, 4vw, 2rem);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  /* taken out of flow so the links centre on the page, not on the leftover space */
+  position: absolute;
+  left: clamp(1.1rem, 4vw, 2rem);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.brand::before {
+  content: '[';
+  color: var(--accent);
+}
+
+.brand::after {
+  content: ']';
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  gap: clamp(0.7rem, 2.4vw, 1.6rem);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.links a {
+  color: var(--muted);
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.links a:hover {
+  color: var(--ink);
+}
+
+.links a.active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .brand {
+    display: none;
+  }
+  .nav {
+    justify-content: center;
+    /* keep any residual overflow inside the bar rather than widening the page */
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+  .links {
+    gap: clamp(0.55rem, 3.5vw, 1.1rem);
+    font-size: 0.72rem;
+    flex-shrink: 0;
+  }
+}

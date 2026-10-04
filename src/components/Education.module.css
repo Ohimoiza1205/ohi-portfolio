@@ -1,0 +1,76 @@
+.edu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.6rem;
+  background: var(--paper-2);
+}
+
+.logo {
+  flex-shrink: 0;
+  display: block;
+  width: 200px;
+  max-width: 40%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .edu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .logo {
+    width: 160px;
+    max-width: 60%;
+  }
+}
+
+.school {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.3rem;
+}
+
+.degree {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0 0 1.2rem;
+}
+
+.label {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.clubs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.clubs li {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+  background: var(--paper);
+}

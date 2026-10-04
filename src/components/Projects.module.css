@@ -1,0 +1,132 @@
+.grid {
+  display: grid;
+  /* one project per row */
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+.project {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.thumbCol {
+  border-bottom: 1px solid var(--line);
+  /* only visible behind an image too small to fill the card */
+  background: var(--tag-bg);
+}
+
+/*
+ * At the file's own aspect ratio, and never scaled past its intrinsic size:
+ * `width: auto` renders each image at its natural pixel width, `max-width`
+ * shrinks the oversized ones down to the card.
+ */
+.thumb {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.body {
+  padding: 1.1rem 1.15rem 1.25rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin: 0 0 0.7rem;
+}
+
+.titleRow h3 {
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: -0.02em;
+  margin: 0;
+  min-width: 0;
+}
+
+.links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+  /* keep the icons optically level with the title text */
+  transform: translateY(0.1em);
+}
+
+.titleRow a {
+  color: var(--muted);
+  transition: color 0.18s ease;
+}
+
+.titleRow a:hover {
+  color: var(--accent);
+}
+
+.body p {
+  font-size: 0.9rem;
+  margin: 0 0 0.7rem;
+}
+
+.badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 0.1rem 0.4rem;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+  vertical-align: middle;
+}
+
+.tagsBottom {
+  padding-top: 0.9rem;
+}
+
+.stats {
+  margin: 0 0 0.8rem;
+}
+
+.linkLabel {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  margin-left: 0.35rem;
+}
+
+.titleRow a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bullets {
+  margin: 0 0 0.4rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+
+.bullets li {
+  margin-bottom: 0.3rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.bullets li::marker {
+  color: var(--accent);
+}

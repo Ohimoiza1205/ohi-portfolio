@@ -1,0 +1,20 @@
+/* Design tokens — tweak the whole site's look from here. */
+:root {
+  /* palette */
+  --paper: #f3f1e9;
+  --paper-2: #eeebe0;
+  --ink: #16150f;
+  --ink-soft: #2b2a22;
+  --muted: #78766b;
+  --line: #dedacd;
+  --accent: #0e7a54;
+  --tag-bg: #eae7db;
+
+  /* type */
+  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: 'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* layout */
+  --maxw: 920px;
+  --nav-h: 60px;
+}

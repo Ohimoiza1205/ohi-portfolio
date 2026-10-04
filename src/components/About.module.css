@@ -1,0 +1,14 @@
+/* the "~/about" heading used to supply this gap under the hero */
+.prose {
+  margin-top: 2.2rem;
+}
+
+.prose p {
+  margin: 0 0 1.05rem;
+  font-size: 0.9rem;
+  hyphens: none;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
